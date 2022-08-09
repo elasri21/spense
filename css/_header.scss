@@ -1,0 +1,98 @@
+header {
+    position: relative;
+    background-color: $main-bg;
+    @media #{$small} {
+        padding: 30px 50px;
+        nav {
+            display: flex !important;
+            justify-content: space-between;
+            align-items: center;
+            width: calc(100% - 200px);
+            ul {
+                display: flex;
+                li {
+                    margin-right: 20px;
+                }
+            }
+        }
+        .menu {
+            display: none !important;
+        }
+    }
+    @media #{$mobile} {
+        nav {
+            width: 95%;
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            border: 1px solid $dark-text;
+            border-radius: 4px;
+            background-color: $dark-text;
+            ul {
+                li {
+                    margin-bottom: 20px;
+                    a {
+                        color: $white !important;
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
+            button {
+                display: block;
+                width: 100%;
+                &.login {
+                    color: $white;
+                }
+                &.signup {
+                    color: $dark-text;
+                    background-color: $white;
+                    margin-top: 15px;
+                    &:hover {
+                        background-color: $black;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        font-size: 15px;
+        font-weight: 600;
+        color: $black;
+    }
+    nav {
+        display: none;
+        ul {
+            li {
+                a {
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: $dark-text;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .close {
+        display: none; 
+        i {
+            font-size: 24px;
+            cursor: pointer;
+            color: $dark-text;
+        }
+    }
+    .menu {
+        img {
+            cursor: pointer;
+        }
+    }
+}
